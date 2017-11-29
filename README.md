@@ -7,7 +7,7 @@ General Hack Day chat on Gitter here: https://gitter.im/Springer-Nature-Hack-Day
 
 And specific Gitter room for this project: https://gitter.im/ScientificDataLabs/dataset-updates-plugin
 
-# Plugin Use
+## Plugin Use
 To run the plugin temporarily in Firefox, clone the plugin folder locally, enter "about:debugging" in the Firefox search bar, click "Load Temporary Add-on", then select the "manifest.json" file. At this time the plugin only runs on Firefox. 
 
 ## Case Use Description
@@ -21,7 +21,8 @@ Dataset: For the purpose of this demo, we are focusing on formally archived data
 
 Dataset update: A new version of the dataset that has been formally associated with the original version via an API that can be queried using the dataset DOI. 
 
-## Example 1
+## Examples
+### Example 1
 Article: https://www.nature.com/articles/sdata201641
 
 Associated dataset: https://doi.org/10.6084/m9.figshare.c.2185342
@@ -30,7 +31,7 @@ Has updated version: https://doi.org/10.6084/m9.figshare.c.2185342.v2
 
 And original version: https://doi.org/10.6084/m9.figshare.c.2185342.v1
 
-## Example 2
+### Example 2
 Article: https://www.nature.com/articles/sdata201426
 
 Associated dataset: https://doi.org/10.6084/m9.figshare.1054736
