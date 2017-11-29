@@ -9,6 +9,9 @@ General Hack Day chat on Gitter here: https://gitter.im/Springer-Nature-Hack-Day
 
 And specific Gitter room for this project: https://gitter.im/ScientificDataLabs/dataset-updates-plugin
 
+# Plugin Use
+To run the plugin temporarily in Firefox, clone the plugin folder locally, enter "about:debugging" in the Firefox search bar, click "Load Temporary Add-on", then select the "manifest.json" file. At this time the plugin only runs on Firefox. 
+
 # Definitions
 
 Article: A peer-reviewed publication with an assigned CrossRef DOI, and associated bibliographic metadata. 
