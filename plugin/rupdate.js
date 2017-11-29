@@ -6,6 +6,13 @@ const styleCss = `
 body {
 	border: 5px solid red;
 }
+
+#doi-list {
+	position: absolute;
+	top: 0px;
+	z-index: 1000;
+	background: red;
+}
 `
 
 if (doiTag) {
@@ -14,6 +21,7 @@ if (doiTag) {
 	document.body.appendChild(element)
 
 	var element = document.createElement('div')
+	element.id = 'doi-list'
 	element.innerHTML = `<h1>HELLO DOILLY: ${doiTag.content}</h1>`
 	document.body.appendChild(element)
 
@@ -48,9 +56,14 @@ if (doiTag) {
 function displayReferences(references, element) {
 	console.log('display references for:', references)
 	const list = references.reduce((list, reference) => {
-		return list + `<li>${reference.title}, ${reference.published_date}</li>`
+		return list + referenceListItem(reference)
 	}, "<ul>") + "</ul>"
-	element.innerHTML = list
+	const title = '<h2>The following data references cited in this article may have changed:</h2>'
+	element.innerHTML = title + list
+}
+
+function referenceListItem(reference) {
+	return `<li>${reference.title}, ${reference.published_date}</li>`
 }
 
 
