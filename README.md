@@ -3,6 +3,8 @@ A tool to identify updates in datasets associated with a specific publication
 
 Use case description: As a researcher reading a peer-reviewed article, I want to know if any associated datasets have been updated since the article was published. 
 
+Chat on Gitter here: https://gitter.im/Springer-Nature-Hack-Day/
+
 # Definitions
 
 Article: A peer-reviewed publication with an assigned CrossRef DOI, and associated bibliographic metadata. 
