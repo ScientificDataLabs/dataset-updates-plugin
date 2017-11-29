@@ -21,7 +21,7 @@ Dataset: For the purpose of this demo, we are focusing on formally archived data
 
 Dataset update: A new version of the dataset that has been formally associated with the original version via an API that can be queried using the dataset DOI. 
 
-## Examples
+## Example articles with associated figshare datasets that were updated post-publication
 ### Example 1
 Article: https://www.nature.com/articles/sdata201641
 
