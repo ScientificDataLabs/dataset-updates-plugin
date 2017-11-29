@@ -17,35 +17,34 @@ if (doiTag) {
 	element.innerHTML = `<h1>HELLO DOILLY: ${doiTag.content}</h1>`
 	document.body.appendChild(element)
 
-	console.log(crossRefAPI(doiTag.content))
-
 	fetch(crossRefAPI(doiTag.content))
-		.then(response => {
-			console.log(response)
-			return response.json()
-		})
+		.then(response => response.json())
 		.then(object => {
 			const referenceDOIs = new Set(object.message.reference
 				.map(r => r.DOI)
 				.filter(r => r !== undefined))
-			lookUpInFig([...referenceDOIs], (results) => {
-				displayReferences(results, element)
+
+			console.log('Fetching data for references: ', referenceDOIs)
+
+			get_me_some_figshare([...referenceDOIs], (results) => {
+				window.setInterval(() => {
+					const results = munger()
+					displayReferences(results, element)
+				}, 1000)
 			})
 
 		})
 		.catch(e => console.error(e))
 }
 
-function lookUpInFig(dois, callback) {
-		// your code here	
-}
 
 function displayReferences(references, element) {
-	console.log(references)
+	console.log('display references for:', references)
 	const list = references.reduce((list, reference) => {
-		return list + `<li>${reference}</li>`
+		return list + `<li>${reference.title}, ${reference.published_date}</li>`
 	}, "<ul>") + "</ul>"
 	element.innerHTML = list
 }
+
 
 
