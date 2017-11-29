@@ -26,6 +26,11 @@ if (doiTag) {
 
 			console.log('Fetching data for references: ', referenceDOIs)
 
+			window.setInterval(() => {
+				const results = munger()
+				displayReferences(results, element)
+			}, 1000)
+
 			get_me_some_figshare([...referenceDOIs], (results) => {
 				window.setInterval(() => {
 					const results = munger()
