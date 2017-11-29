@@ -30,11 +30,12 @@ if (doiTag) {
 	fetch(crossRefAPI(doiTag.content))
 		.then(response => response.json())
 		.then(object => {
-			const referenceDOIs = new Set(object.message.reference
-				.map(r => r.DOI)
-				.filter(r => r !== undefined))
-
-			findDois(document.body)
+			const referenceDOIs = new Set([
+				... object.message.reference
+						.map(r => r.DOI)
+						.filter(r => r !== undefined),
+				... findDois(document.body)
+			])
 
 			console.log('Fetching data for references: ', referenceDOIs)
 
@@ -54,14 +55,17 @@ if (doiTag) {
 		.catch(e => console.error(e))
 }
 
-
+var massiveHack = 0
 function displayReferences(references, element) {
-	console.log('display references for:', references)
-	const list = references.reduce((list, reference) => {
-		return list + referenceListItem(reference)
-	}, "<ul>") + "</ul>"
-	const title = '<h2>The following data references cited in this article may have changed:</h2>'
-	element.innerHTML = title + list
+	if(massiveHack != references.length) {
+		console.log('display references for:', references)
+		const list = references.reduce((list, reference) => {
+			return list + referenceListItem(reference)
+		}, "<ul>") + "</ul>"
+		const title = '<h2>The following data references cited in this article may have changed:</h2>'
+		element.innerHTML = title + list
+		massiveHack = references.length
+	}
 }
 
 function referenceListItem(reference) {

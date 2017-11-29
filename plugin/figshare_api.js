@@ -1,8 +1,4 @@
 found_results = [];
-function call_fct(updates) {
-  console.log(updates);
-}
-
 final_callback = 0;
 
 function get_me_some_figshare(dois, callback) {
@@ -65,7 +61,7 @@ function get_figshare_article(collection_id, xmlhttp) {
 		.then(response => response.json())
 	        .then(article => {
 			if (article === undefined || article.message) {
-				console.log('undefined for : ', url)
+				// console.log('undefined for : ', url)
 			} else {
 				results_updates['article_'+article["id"]].data = article;
 				results_updates['article_'+article["id"]].done = true;
