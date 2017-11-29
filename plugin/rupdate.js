@@ -15,6 +15,10 @@ body {
 	color: white;
 	background: rgba(0,0,0,0.8);
 }
+
+#doi-list a {
+	color: white;
+}
 `
 
 if (doiTag) {
@@ -69,7 +73,9 @@ function displayReferences(references, element) {
 }
 
 function referenceListItem(reference) {
-	return `<li>${reference.title}, ${reference.published_date}</li>`
+	const link = "https://figshare.com/collections/collection/" + reference.id
+	const date = new Date(reference.modified_date)
+	return `<li><a href="${link}" target="_blank">${reference.title}</a>, ${reference.modified_date} </li>`
 }
 
 

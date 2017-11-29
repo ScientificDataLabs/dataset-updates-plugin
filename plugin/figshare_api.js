@@ -123,7 +123,8 @@ function munger() {
 				version: data.version,
 				title: data.title,
 				doi: data.doi,
-				published_date: data.published_date
+				published_date: data.published_date,
+				link: data.resource_link
 			})
 		}
 	}
