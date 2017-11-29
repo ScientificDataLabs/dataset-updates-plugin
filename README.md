@@ -26,8 +26,6 @@ Has updated version: https://doi.org/10.6084/m9.figshare.c.2185342.v2
 
 And original version: https://doi.org/10.6084/m9.figshare.c.2185342.v1
 
-Article: https://www.nature.com/articles/sdata201641
-
 # Example 2
 Article: https://www.nature.com/articles/sdata201426
 
