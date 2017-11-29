@@ -9,7 +9,7 @@ Article: A peer-reviewed publication with an assigned CrossRef DOI, and associat
 
 Dataset: For the purpose of this demo, we are focusing on formally archived datasets with an assigned DataCite DOI. 
 
-Dataset update: A new version of the dataset which has been formally associated with the original version via an API that can be queried using the dataset DOI. 
+Dataset update: A new version of the dataset that has been formally associated with the original version via an API that can be queried using the dataset DOI. 
 
 # Example 1
 Article: https://www.nature.com/articles/sdata201641
