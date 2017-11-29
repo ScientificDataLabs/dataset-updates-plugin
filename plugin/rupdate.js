@@ -1,4 +1,5 @@
 const doiTag = document.querySelector('meta[name=citation_doi]')
+const pubDate  = document.querySelector('meta[name="dc.date"]').content
 
 const crossRefAPI = function (doi) { return `http://api.crossref.org/works/${doi}` }
 
@@ -18,6 +19,10 @@ body {
 
 #doi-list a {
 	color: white;
+}
+
+#doi-list .updated {
+	color: pink;
 }
 `
 
@@ -75,7 +80,12 @@ function displayReferences(references, element) {
 function referenceListItem(reference) {
 	const link = "https://figshare.com/collections/collection/" + reference.id
 	const date = new Date(reference.modified_date)
-	return `<li><a href="${link}" target="_blank">${reference.title}</a>, ${reference.modified_date} </li>`
+	const pub = new Date(pubDate)
+	const poop = date > pub
+	const updated = poop ? "updated" : ""
+	
+
+	return `<li class="${updated}"><a href="${link}" target="_blank">${reference.title}</a>, ${reference.modified_date} </li>`
 }
 
 
