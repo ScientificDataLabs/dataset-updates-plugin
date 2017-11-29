@@ -24,6 +24,8 @@ if (doiTag) {
 				.map(r => r.DOI)
 				.filter(r => r !== undefined))
 
+			findDois(document.body)
+
 			console.log('Fetching data for references: ', referenceDOIs)
 
 			window.setInterval(() => {

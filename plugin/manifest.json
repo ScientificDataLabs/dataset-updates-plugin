@@ -16,7 +16,7 @@
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "js": ["figshare_api.js", "rupdate.js"]
+      "js": ["figshare_api.js", "find_dois.js", "rupdate.js"]
     }
   ]
 }
