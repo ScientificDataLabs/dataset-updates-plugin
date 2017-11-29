@@ -4,14 +4,16 @@ const crossRefAPI = function (doi) { return `http://api.crossref.org/works/${doi
 
 const styleCss = `
 body {
-	border: 5px solid red;
+
 }
 
 #doi-list {
 	position: absolute;
 	top: 0px;
 	z-index: 1000;
-	background: red;
+	font-family: 'Comic sans',  sans-serif;
+	color: white;
+	background: rgba(0,0,0,0.8);
 }
 `
 
