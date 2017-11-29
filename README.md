@@ -1,4 +1,6 @@
 # dataset-updates-plugin
+
+[![Join the chat at https://gitter.im/ScientificDataLabs/dataset-updates-plugin](https://badges.gitter.im/ScientificDataLabs/dataset-updates-plugin.svg)](https://gitter.im/ScientificDataLabs/dataset-updates-plugin?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 A tool to identify updates in datasets associated with a specific publication
 
 Use case description: As a researcher reading a peer-reviewed article, I want to know if any associated datasets have been updated since the article was published. 
