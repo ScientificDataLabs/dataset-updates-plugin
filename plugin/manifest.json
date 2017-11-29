@@ -7,9 +7,12 @@
   "description": "Is this research updated",
 
   "icons": {
-    "48": "icons/rupdate-48.png"
+	  "48": "icons/rupdate-48.png"
   },
-
+  "permissions": [
+	  "http://api.crossref.org/",
+	  "http://foass.com/"
+    ],
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
