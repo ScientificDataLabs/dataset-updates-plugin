@@ -19,10 +19,15 @@ body {
 
 #doi-list a {
 	color: white;
+	text-decoration: underline;
 }
 
 #doi-list .updated {
-	color: pink;
+	color: orange;
+}
+
+#doi-list .updated a {
+	color: orange;
 }
 `
 
@@ -71,7 +76,7 @@ function displayReferences(references, element) {
 		const list = references.reduce((list, reference) => {
 			return list + referenceListItem(reference)
 		}, "<ul>") + "</ul>"
-		const title = '<h2>The following data references cited in this article may have changed:</h2>'
+		const title = '<h2>Data Resources in this article (orange indicates post publication update)</h2>'
 		element.innerHTML = title + list
 		massiveHack = references.length
 	}
