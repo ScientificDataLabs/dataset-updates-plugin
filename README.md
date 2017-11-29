@@ -1,7 +1,7 @@
 # dataset-updates-plugin
 
 [![Join the chat at https://gitter.im/ScientificDataLabs/dataset-updates-plugin](https://badges.gitter.im/ScientificDataLabs/dataset-updates-plugin.svg)](https://gitter.im/ScientificDataLabs/dataset-updates-plugin?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-A tool to identify updates in datasets associated with a specific publication
+A tool to identify updates in datasets associated with a specific publication. For the purpose of this hack day event, we have limited our scope to figshare datasets.
 
 General Hack Day chat on Gitter here: https://gitter.im/Springer-Nature-Hack-Day/
 
