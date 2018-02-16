@@ -1,0 +1,30 @@
+{
+    "name": "doi",
+    "version": "0.0.0",
+    "description": "",
+    "main": "n/a",
+    "scripts": {
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "web-ext": "^2.4.0"
+    },
+    "dependencies": {
+        "webextension-polyfill": "^0.2.1"
+    },
+    "standard": {
+        "ignore": [
+            "/plugin/*"
+        ],
+        "globals": [
+            "browser",
+            "localStorage",
+            "URLSearchParams",
+            "fetch",
+            "Headers",
+            "FormData",
+            "Node"
+        ]
+    }
+}
